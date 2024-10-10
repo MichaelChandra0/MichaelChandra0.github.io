@@ -1,0 +1,440 @@
+:root {
+  /* --primary: #c29d6a; */
+  --hover: #c879ff;
+  /* --bg:  */
+  --span: #431259;
+  --font-weight-header: 700;
+  --font-weight-content: 300;
+  /* --nav-color: #c19bff; */
+  --footer: #c19bff;
+  --heading: #431259;
+  --font-default: #4a006f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Didact Gothic", sans-serif;
+  /* background-color: var(--bg); */
+  /* background-color: black; */
+  /* background-image: url(assets/mudassir-ali-NZ0HxSy55hY-unsplash.jpg); */
+  /* background-color: var(--bg); */
+  background-color: #cbbdff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--font-default);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  /* background-color: rgba(1, 1, 1, 0.8); */
+  background-color: var(--nav-color);
+  /* background-color: black; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-image: linear-gradient(#e4a5ff, #cbbdff);
+  border-bottom: 1px solid #b4a0ff;
+  /* border-bottom: 0.1rem solid #ab94fd72; */
+  /* opacity: 90%; */
+  /* border-bottom: 1px solid #b4a0ff; */
+}
+
+.navbar .logo img {
+  /* color: white; */
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar .navbar-nav a {
+  color: var(--font-default);
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  padding: 0.1rem;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--hover);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--hover);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra .fa-bars {
+  color: #3f288d;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+.navbar .navbar-extra .fa-bars:hover {
+  color: var(--hover);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Content */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5em;
+  font-weight: var(--font-weight-header);
+  color: var(--heading);
+  /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
+  line-height: 1.2;
+}
+
+.content h1 span {
+  color: var(--span);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-weight: var(--font-weight-content);
+  line-height: 1.4;
+  /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
+}
+
+/* About */
+
+.about {
+  padding: 8rem 7% 1.4rem;
+  /* background-color: var(--about); */
+  /* background-image: url(assets/mudassir-ali-NZ0HxSy55hY-unsplash.jpg); */
+}
+
+.about h2,
+.project h2,
+.contact h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: var(--font-weight-header);
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--heading);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  width: 15%;
+  margin-right: 10rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.about .row .content h3 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-weight: var(--font-weight-content);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* Project */
+.project {
+  padding: 8rem 7% 1.4rem;
+  /* background-image: url(assets/antoine-rault-IhWRrZx4-kk-unsplash.jpg); */
+  /* background-image: url(assets/mudassir-ali-NZ0HxSy55hY-unsplash.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project h2 {
+  text-align: center;
+}
+
+.project .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.project-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.project-card .project-img {
+  margin: 4rem;
+  border-radius: 50%;
+  width: 100px;
+}
+
+.project-desc {
+  margin: 1rem auto 0.5rem;
+  font-weight: var(--font-weight-content);
+}
+
+.project-link {
+  font-weight: var(--font-weight-content);
+  color: var(--font-default);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.project-link:hover {
+  color: var(--hover);
+}
+
+/* Contact */
+.contact {
+  padding: 8rem 7% 1.4rem;
+  /* padding-bottom: 10rem; */
+  /* background-color: var(--about); */
+  /* background-image: url(assets/alexandr-podvalny-n_Jb_d8O43Q-unsplash.jpg); */
+  /* background-image: url(assets/mudassir-ali-NZ0HxSy55hY-unsplash.jpg); */
+}
+
+.card {
+  /* max-width: 300px; */
+  margin: auto;
+  text-align: center;
+}
+
+.card img {
+  /* height: 25rem; */
+  border-radius: 50%;
+  width: 20rem;
+}
+
+.card h1 {
+  color: var(--font-weight-header);
+  font-weight: var(--font-weight-header);
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.card .title {
+  padding-bottom: 1rem;
+  font-weight: var(--font-weight-content);
+  font-size: 1.9rem;
+}
+
+.link-school {
+  color: var(--font-default);
+  text-decoration: underline;
+  font-weight: var(--font-weight-content);
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.link-school:hover {
+  color: var(--hover);
+}
+
+.icon {
+  margin: 2rem;
+}
+
+.icon .fa-solid,
+.fa-brands {
+  padding: 1rem;
+  /* width: 10px; */
+  color: white;
+  transition: 0.3s;
+}
+
+.icon .fa-brands:hover {
+  color: var(--hover);
+}
+
+.icon .fa-solid:hover {
+  color: var(--hover);
+}
+
+/* Footer */
+footer {
+  background-image: linear-gradient(#cbbdff, #e4a5ff);
+  text-align: center;
+  padding: 1rem 0.3rem;
+  /* margin-top: 1rem; */
+  border-top: 1px solid #b4a0ff;
+}
+
+footer .socials {
+  padding: 0.1rem 0;
+}
+
+footer .socials a {
+  margin: 1rem;
+  transition: 0.3s;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--hover);
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: var(--font-default);
+  padding: 0.7rem 1rem;
+  transition: 0.3s;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  font-weight: var(--font-weight-header);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+footer .fa-brands {
+  margin: 1rem;
+  transition: 0.3s;
+}
+
+/* Media Queries */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #cbbdff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    /* opacity: 100%; */
+    border-top: 1px solid #b4a0ff;
+    /* display: inline-block; */
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--font-default);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    /* height: 24rem; */
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+  }
+
+  .card img {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
